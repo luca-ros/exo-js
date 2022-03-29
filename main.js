@@ -78,10 +78,21 @@ if (condition1 || condition2) {
     console.log(" La personne est non imposable.")
 }
 
-// Exo 10
+// Exo 10                           Uncomplete
 let aPayer = 120;
 let verse = 200;
 let resteApayer = verse - aPayer;
+
+
+
+// Exo 11
+const voitures = {}
+    voitures["Peugeot"] = "3"
+    voitures["Renault"] = "5"
+    voitures["BMW"] = "2"
+    voitures["Mercedes"] = "6"
+
+    console.log(voitures.Peugeot)
 
 
 
