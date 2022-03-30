@@ -78,21 +78,90 @@ if (condition1 || condition2) {
     console.log(" La personne est non imposable.")
 }
 
-// Exo 10                           Uncomplete
-let aPayer = 120;
+// Exo 10                         
+let aPayer = 147;
 let verse = 200;
 let resteApayer = verse - aPayer;
+
+let billet10 = Math.floor(resteApayer/10);
+console.log(billet10 +" "+ "billet de 10");
+resteApayer = resteApayer - 10 * billet10;
+
+let billet5 = Math.floor(resteApayer/5);
+console.log(billet5 + " " +"billet de 5");
+resteApayer = resteApayer - 0 * billet5;
+
+let piece2 = Math.floor(resteApayer/2);
+console.log(piece2 +" "+ "pieces de 2");
+resteApayer = resteApayer - 2 * piece2;
+
+console.log(resteApayer +" "+ "pieces de 1");
 
 
 
 // Exo 11
-const voitures = {}
-    voitures["Peugeot"] = "3"
-    voitures["Renault"] = "5"
-    voitures["BMW"] = "2"
-    voitures["Mercedes"] = "6"
+const voitures = ["Peugeot", "Renault", "BMW", "Mercedes"];
 
-    console.log(voitures.Peugeot)
+console.log(voitures.length + " marques de voitures");
+console.log(voitures)
 
 
+// Exo 12                   uncompleted need to sort 
+prenomsClients = {
+    "Mickaël": "FRA",
+    "Virgile": "ESP",
+    "Marie-Claire": "ENG"
+}
+
+// prenomsClients.sort();
+
+for (let prenom in prenomsClients) {
+    if (prenomsClients[prenom] === "FRA") {
+        console.log("Salut " + prenom)
+
+    } else if (prenomsClients[prenom] === "ESP") {
+        console.log("Hola " + prenom)
+
+    } else if(prenomsClients[prenom] === "ENG") 
+    console.log("Hello " + prenom)
+
+}   
+
+
+// Exo 13
+
+let arraynotes = [10, 12, 8, 19, 3, 16, 11, 13, 9]
+let noteslength
+let summ
+function ArrayAvg(arraynotes){  
+    let i = 0, summ = 0, noteslength = arraynotes.length
+    while (i < noteslength) {
+         summ += arraynotes[i++]
+        
+}
+    return (summ / noteslength).toFixed(2)
+}
+let moyenne = ArrayAvg(arraynotes)
+console.log("la moyenne générale : " + moyenne)
+
+
+// Exo 14                                   needs deepening!!
+
+function getAge(date) { 
+    let diff = Date.now() - date.getTime();
+    let age = new Date(diff); 
+    return Math.abs(age.getUTCFullYear() - 1970); // perché - 1970???
+}
+console.log(getAge(new Date(1985, 02, 14))); //Date(année, mois, jour) janvier=0
+
+
+// Exo 15
+
+class Personne {
+    constructor(nom, prenom, age) {
+        this.nom = DUPONT;
+        this.nom = 
+    }
+//https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Classes
+}
 
