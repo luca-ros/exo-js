@@ -158,10 +158,11 @@ console.log(getAge(new Date(1985, 02, 14))); //Date(année, mois, jour) janvier=
 // Exo 15
 
 class Personne {
-    constructor(nom, prenom, age) {
-        this.nom = DUPONT;
-        this.nom = 
+    constructor(nom, pre, age) {
+        this.nom = nom;
+        this.pre = pre;
+        this.age = age;
     }
-//https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Classes
 }
+//https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Classes
 
