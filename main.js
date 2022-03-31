@@ -152,7 +152,7 @@ function getAge(date) {
     let age = new Date(diff); 
     return Math.abs(age.getUTCFullYear() - 1970); // Why - 1970 ? => is the number of milliseconds that have passed since January 1, 1970
 }
-console.log(getAge(new Date(1985, 02, 14))+" ans"); //Date(année, mois, jour) janvier=0
+console.log(getAge(new Date(1985, 02, 14))+" ans"); //Date(année, mois, jour) janvier = 0
 
 
 // Exo 15
