@@ -106,7 +106,7 @@ console.log(voitures.length + " marques de voitures");
 console.log(voitures)
 
 
-// Exo 12                   uncompleted need to sort 
+// Exo 12                   uncompleted... need to sort 
 prenomsClients = {
     "Mickaël": "FRA",
     "Virgile": "ESP",
@@ -150,19 +150,42 @@ console.log("la moyenne générale : " + moyenne)
 function getAge(date) { 
     let diff = Date.now() - date.getTime();
     let age = new Date(diff); 
-    return Math.abs(age.getUTCFullYear() - 1970); // perché - 1970???
+    return Math.abs(age.getUTCFullYear() - 1970); // Why - 1970???
 }
-console.log(getAge(new Date(1985, 02, 14))); //Date(année, mois, jour) janvier=0
+console.log(getAge(new Date(1985, 02, 14))+" ans"); //Date(année, mois, jour) janvier=0
 
 
 // Exo 15
 
+//      Créer une classe Personne (nom, prénom et date de naissance).
+//     Instancier 2 personnes et afficher leurs informations : nom, prénom et âge.
+
+
+// déclaration de classe
 class Personne {
-    constructor(nom, pre, age) {
+    constructor(nom, pre, dateN) {
         this.nom = nom;
         this.pre = pre;
-        this.age = age;
+        this.dateN = new Date(dateN);
     }
+    
+    getAgeP(){
+        let diff = Date.now() - this.dateN.getTime();
+        let age = new Date(diff);
+        return Math.abs(age.getUTCFullYear() - 1970);
+
+    }
+
+    getFullName(){
+        return this.pre + " " + this.nom;
+
+    }
+    
 }
+const p1 = new Personne("DUPONT", "Michel", "1980-02-19")
+const p2 = new Personne("DUCHEMIN", "Alice", "1985-01-17")
+
+console.log(p1.getFullName() + " a "+ p1.getAgeP() + " ans")
+
 //https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Classes
 
