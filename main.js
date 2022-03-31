@@ -186,6 +186,7 @@ const p1 = new Personne("DUPONT", "Michel", "1980-02-19")
 const p2 = new Personne("DUCHEMIN", "Alice", "1985-01-17")
 
 console.log(p1.getFullName() + " a "+ p1.getAgeP() + " ans")
+console.log(p2.getFullName() + " a "+ p2.getAgeP() + " ans")
 
 //https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Classes
 
