@@ -150,7 +150,7 @@ console.log("la moyenne générale : " + moyenne)
 function getAge(date) { 
     let diff = Date.now() - date.getTime();
     let age = new Date(diff); 
-    return Math.abs(age.getUTCFullYear() - 1970); // Why - 1970???
+    return Math.abs(age.getUTCFullYear() - 1970); // Why - 1970 ? => is the number of milliseconds that have passed since January 1, 1970
 }
 console.log(getAge(new Date(1985, 02, 14))+" ans"); //Date(année, mois, jour) janvier=0
 
